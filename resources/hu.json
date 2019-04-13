@@ -1,0 +1,23 @@
+{
+    "indexTitle" : "Startlap",
+
+    "userInterfaceTitle" : "Kezelő felület",
+    "userInterfaceNavbarTitle" : "MOD Számítástechnikai kft",
+
+    "userInterfaceNavbarNotificationToltip" : "Értesítések",
+    "userInterfaceNavbarSettingsToltip" : "Beállítások",
+    "userInterfaceNavbarHelpToltip" : "Súgó",
+    "userInterfaceNavbarProfileToltip" : "Profil",
+
+    "userInterfaceSideNavbarHome" : "Menü",
+    "userInterfaceSideNavbarServices" : "Szolgáltatások",
+    "userInterfaceSideNavbarServicesHome" : "Kezdőlap",
+    "userInterfaceSideNavbarServicesCalendar" : "Naptár",
+    "userInterfaceSideNavbarServicesDocuments" : "Dokumentumok",
+    "userInterfaceSideNavbarServicesMail" : "Levelek",
+    "userInterfaceSideNavbarServicesNotification" : "Értesítések",
+    "userInterfaceSideNavbarServicesAccount" : "Előfizetés",
+    "userInterfaceSideNavbarServicesPriceOffer" : "Árajánlat készítés",
+    "userInterfaceSideNavbarServicesGraph" : "Kimutatások",
+    "userInterfaceSideNavbarHomes" : "MenüItem"
+}

@@ -1,0 +1,16 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+}
+.container{
+    width: 100% !important;
+}
+
+iframe{
+    border: 0px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    font-weight: bold;
+}
