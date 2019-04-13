@@ -17,7 +17,7 @@ App.controller('LoginController', function ($scope, $rootScope, LoginService) {
         .then(function(response){
             window.location.href = response.data;
         }).catch(function (error) {
-            alert(error.status);
+            alert(error.status + " - " + error.statusText);
         });
     }
 
