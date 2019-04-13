@@ -16,9 +16,6 @@
     /********************************************************************/
     function Login(){
 
-        $asd = new AutenticationException("",1);
-        //$asda = $asd -> __get(statusCode);
-
         try {
             //Ellenőrizni kell a hívás típusát
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
