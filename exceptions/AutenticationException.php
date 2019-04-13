@@ -4,8 +4,15 @@
 
     class AutenticationException extends CustomErrorException{
         
-        protected $statusCode = 502;
-        protected $message = "Base exception message";
+        public $statusCode = "401";
+        public $msg = "Unauthorize";
 
+        // public function __die(){
+        //     header("HTTP/1.1 " . $this->statusCode . " " . $this->msg);
+        //     die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+        // }
+
+        // header('HTTP/1.1 401 Unauthorize');
+        // die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
     }
 ?>

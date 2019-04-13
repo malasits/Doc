@@ -19,7 +19,7 @@
         try {
             //Ellenőrizni kell a hívás típusát
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+ 
                 //Ellenőrizni kell a jogosultságot
                 if(1 == 1){
                     
@@ -46,8 +46,10 @@
             }
         }
         catch (AutenticationException $e) {
-            header('HTTP/1.1 401 Unauthorize');
-            die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+            // header('HTTP/1.1 401 Unauthorize');
+            // die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+            $a = new AutenticationException("",1);
+            $a -> __die();
         }
         
     };

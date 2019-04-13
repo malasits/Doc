@@ -3,8 +3,8 @@
 
     class CustomErrorException extends Exception implements IExceptions{
         
-        protected $statusCode = 505;
-        protected $message = "Base exception message";
+        protected $statusCode = "408";
+        protected $msg = "Base exception message";
         
         // Redefine the exception so message isn't optional
         public function __construct($message, $code = 0, Exception $previous = null) {
@@ -35,6 +35,11 @@
             }
         
             return $this;
+        }
+
+        public function __die(){
+            header("HTTP/1.1 " . $this->statusCode . " " . $this->msg);
+            die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
         }
     }
 ?>
