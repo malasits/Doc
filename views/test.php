@@ -35,15 +35,15 @@
 
         }
         
-        class Employee {
+        // class Employee {
 
-            public $Name = "asd";
+        //     public $Name = "asd";
 
-            private $dependency;
-            public function __construct(IEmployee $dependency) {
-               $this->dependency = $dependency;
-            }
-        }
+        //     private $dependency;
+        //     public function __construct(IEmployee $dependency) {
+        //        $this->dependency = $dependency;
+        //     }
+        // }
         
 
         // $injector = new Auryn\Injector;
@@ -55,6 +55,7 @@
         // echo $myObj -> GetName();
 
         $injector = new Auryn\Injector;
+        $injector->share('EmployeeFactory');
         $instance = $injector->make('EmployeeFactory');
         $instance2 = $injector->make('EmployeeFactory');
 

@@ -5,6 +5,9 @@
     header("Access-Control-Allow-Origin: *");
     
     require_once("../exceptions/AutenticationException.php");
+    
+    //require_once("../DAO/DependencyMapper.php");
+    //$autenticationException = $injector->make('AutenticationException');
 
     $SwitchMethods = $_REQUEST["Method"];
     $SwitchMethods();

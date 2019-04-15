@@ -1,5 +1,10 @@
 <?php 
 
+    define("_MySQLServer","localhost:3308");
+    define("_MySQLUser","localhost");
+    define("_MySQLPassword","localhost");
+    define("_MySQLDatabase","localhost");
+
     //Beolvassa a resource fájl tartalmát
     function LoadResourceFile($jsonLocation){
         $json = file_get_contents($jsonLocation,true);
