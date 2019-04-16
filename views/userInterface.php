@@ -1,6 +1,7 @@
 <?php
     require_once("../views/shared/layout.php");
     require_once("../DAO/config.php");
+    
     //Get the header of the page
     echo GetHeader($resourceArray["userInterfaceTitle"]);
 ?>
@@ -88,4 +89,5 @@
 <?php 
     //Get the footer of the page
     echo GetFooter();
+    CheckUserCredential(false);
 ?>

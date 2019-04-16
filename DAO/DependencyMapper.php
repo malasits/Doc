@@ -12,6 +12,8 @@
     include("../packages/Auryn1.4.2/ReflectionCacheArray.php");
     include("../packages/Auryn1.4.2/StandardReflector.php");
 
+    //include("../Model/UserModel.php");
+
     $injector = new Auryn\Injector;
 
 ?>

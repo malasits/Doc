@@ -2,16 +2,18 @@
     /********************************************************************/
     // Global class settings                                                  
     /********************************************************************/
+    
     header("Access-Control-Allow-Origin: *");
     
     require_once("../exceptions/AutenticationException.php");
-    
-    //require_once("../DAO/DependencyMapper.php");
-    //$autenticationException = $injector->make('AutenticationException');
+    require_once("../SQL/UserSQL.php");
 
-    $SwitchMethods = $_REQUEST["Method"];
+    //Url engedély ellenőrzése
+    //CheckUserCredential(false);
+    $SwitchMethods = $_REQUEST["Method"] or die("Hibás kérelem...");
     $SwitchMethods();
 
+    
     /********************************************************************/
     // Login to application                                      
     // param: $username  - username                                                
@@ -33,12 +35,15 @@
                     $password = $request -> password;
                     
                     //Felhasználónév és jelszó ellenőrzése
-                    if($username == "a" && $password == "a"){
-                        
-                        echo("http://127.0.0.1/dok/views/userInterface.php");
+                    $userSQL = new UserSQL();
+                    $findUser = $userSQL ->  __getUserByCredential($username, $password);
 
+                    if($findUser != null){
+                        $_SESSION['user'] = $findUser;
+                        echo ("http://127.0.0.1/dok/views/userInterface.php");
                     }
                     else{
+                        $_SESSION['user'] = $findUser;
                         throw new AutenticationException("Error Processing Request", 1);
                     }
                 }   
@@ -53,6 +58,9 @@
             // die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
             $a = new AutenticationException("",1);
             $a -> __die();
+        }
+        catch(\Throwable $th){
+            echo "error";
         }
         
     };

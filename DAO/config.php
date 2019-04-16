@@ -1,9 +1,13 @@
 <?php 
+    session_start();
 
-    define("_MySQLServer","localhost:3308");
-    define("_MySQLUser","localhost");
-    define("_MySQLPassword","localhost");
-    define("_MySQLDatabase","localhost");
+    //MySQL kapcsolat
+    define("_MySQLServer","localhost");
+    define("_MySQLUser","Malasits");
+    define("_MySQLPassword","Katarina08");
+    define("_MySQLDatabase","doc");
+    define("_MySQLPort",3308);
+   
 
     //Beolvassa a resource fájl tartalmát
     function LoadResourceFile($jsonLocation){
@@ -12,6 +16,14 @@
     }
 
     $resourceArray = LoadResourceFile("../resources/hu.json");
+
+    //Megizsgálja, hogy be lett e jelentkezve
+    //$allowLink - true/false false esetén nem elérhető urlből
+    //visszaléptet az indexre, ha nem
+    function CheckUserCredential($allowLink){
+        //print_r($_SESSION['user']);
+       //header("Location: http://127.0.0.1/dok/views/index.php");
+    }
 ?>
 
 <?php
