@@ -1,7 +1,6 @@
 <?php 
     
     include("../interfaces/IUserSQL.php");
-    include("../Model/UserModel.php");
     include("BaseSQL.php");
 
     class UserSQL extends BaseSQL implements IUserSQL{
